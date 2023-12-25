@@ -1,0 +1,83 @@
+[versions]
+kotlin = "1.9.10"
+junit = "1.1.5"
+junit4 = "4.13.2"
+espresso = "3.5.1"
+
+androidGradlePlugin = "8.1.4"
+androidxTestExt = "1.1.5"
+androidxCore = "1.12.0"
+androidxLifecycle = "2.6.2"
+androidxNavigation = "2.7.6"
+androidxActivity = "1.8.2"
+androidxAppcompat = "1.7.0-alpha03"
+androidxMaterial = "1.11.0"
+
+androidxComposeBom = "2023.10.01"
+androidxComposeCompiler = "1.5.3"
+androidxComposeMaterial3 = "1.2.0-beta01"
+androidxComposeAnimation = "1.5.0-beta.1"
+androidxComposeAccompanist = "0.32.0"
+
+[libraries]
+junit = { group = "androidx.test.ext", name = "junit", version.ref = "junit" }
+junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
+androidxTestExt = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "androidxTestExt" }
+androidxTestEspressoCore = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+
+androidxCoreKtx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
+androidxLifecycleRuntimeCompose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
+androidxLifecycleViewModelCompose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
+androidxNavigationCompose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
+androidxActivityCompose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
+androidxAppcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppcompat" }
+androidMaterial = { group = "com.google.android.material", name = "material", version.ref = "androidxMaterial" }
+
+androidxComposeBom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
+androidxComposeFoundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidxComposeMaterialIconsExtended = { group = "androidx.compose.material", name = "material-icons-extended" }
+androidxComposeAnimation = { group = "androidx.compose.animation", name = "animation" }
+androidxComposeUi = { group = "androidx.compose.ui", name = "ui" }
+androidxComposeMaterial = { group = "androidx.compose.material", name = "material" }
+androidxComposeMaterial3 = { group = "androidx.compose.material3", name = "material3", version.ref = "androidxComposeMaterial3" }
+androidxComposeRuntime = { group = "androidx.compose.runtime", name = "runtime" }
+androidxComposeUiTest = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidxComposeUiTooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidxComposeUiToolingPreview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidxComposeAccompanistSystemuicontroller = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "androidxComposeAccompanist" }
+androidxComposeAccompanistPagerIndicators = { group = "com.google.accompanist", name = "accompanist-pager-indicators", version.ref = "androidxComposeAccompanist" }
+
+[plugins]
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlinGradlePlugin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+androidApplication = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+androidLibrary = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+androidTest = { id = "com.android.test", version.ref = "androidGradlePlugin" }
+
+[bundles]
+core = [
+    "androidMaterial",
+    "androidxAppcompat",
+    "androidxCoreKtx"
+]
+
+compose = [
+    "androidxActivityCompose",
+    "androidxComposeUi",
+    "androidxComposeUiTooling",
+    #   "androidxComposeUiToolingPreview",
+    "androidxComposeMaterialIconsExtended",
+    "androidxComposeMaterial3",
+    "androidxComposeFoundation",
+    "androidxNavigationCompose",
+    "androidxComposeAnimation",
+    "androidxLifecycleRuntimeCompose",
+    "androidxLifecycleViewModelCompose"
+]
+
+composeAccompanist = [
+    "androidxComposeAccompanistSystemuicontroller",
+    "androidxComposeAccompanistPagerIndicators",
+]

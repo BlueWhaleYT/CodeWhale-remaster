@@ -1,0 +1,1 @@
+/Users/bluewhaleyt/AndroidStudioProjects/WhaleComposeProducts/CodeWhale/buildSrc/build/classes/kotlin/main/ProjectVersion.class
