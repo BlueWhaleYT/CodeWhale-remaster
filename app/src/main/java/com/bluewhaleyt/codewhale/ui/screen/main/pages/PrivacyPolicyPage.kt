@@ -17,7 +17,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.bluewhaleyt.codewhale.R
-import com.bluewhaleyt.codewhale.ResetAppButton
 import com.bluewhaleyt.codewhale.common.ui.component.AnimateIconButton
 import com.bluewhaleyt.codewhale.common.ui.component.Info
 import com.bluewhaleyt.codewhale.ui.screen.main.MainViewModel
@@ -37,7 +36,6 @@ fun PrivacyPolicyPage(
         title = { Text(text = "Privacy Policy") },
         columnModifier = Modifier.padding(16.dp),
         actions = { scrollState ->
-            ResetAppButton()
             AnimateIconButton(
                 visible = scrollState.value == scrollState.maxValue,
                 imageVector = Icons.AutoMirrored.Filled.ArrowForward,
