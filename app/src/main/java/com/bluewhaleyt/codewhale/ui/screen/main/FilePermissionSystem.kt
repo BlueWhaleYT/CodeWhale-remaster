@@ -9,10 +9,6 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.content.ContextCompat
 
@@ -51,11 +47,11 @@ object FilePermissionSystem : FilePermissionSystemInterface {
     operator fun invoke(
         action: (
             launcher: ManagedActivityResultLauncher<Array<String>, Map<String, @JvmSuppressWildcards Boolean>>,
-                ) -> Unit
+                ) -> Unit,
+        onResult: ((Map<String, @JvmSuppressWildcards Boolean>) -> Unit)? = null
     ) {
         val context = LocalContext.current
         val permissionGranted = arePermissionsGranted(context)
-        var showPermissionDialog by remember { mutableStateOf(!permissionGranted) }
 
         val launcher = rememberLauncherForActivityResult(
             contract = ActivityResultContracts.RequestMultiplePermissions(),
@@ -64,7 +60,8 @@ object FilePermissionSystem : FilePermissionSystemInterface {
                     context = context,
                     permissions = permissions
                 )
-                showPermissionDialog = !permissionGranted
+//                onResult?.invoke(permissions)
+                Log.w("File permission", "onResult launched")
             }
         )
         LaunchedEffect(Unit) {

@@ -33,6 +33,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.bluewhaleyt.codewhale.ResetAppButton
 import com.bluewhaleyt.codewhale.Screen
 import com.bluewhaleyt.codewhale.common.ui.component.Info
 import com.bluewhaleyt.codewhale.editor.CodeEditor
@@ -57,6 +58,7 @@ fun EditorScreen(
             TopAppBar(
                 title = { Text(text = "CodeWhale") },
                 actions = {
+                    ResetAppButton()
                     IconButton(onClick = { navController.navigate(Screen.MainScreen.route) }) {
                         Icon(imageVector = Icons.Default.Settings, contentDescription = null)
                     }
