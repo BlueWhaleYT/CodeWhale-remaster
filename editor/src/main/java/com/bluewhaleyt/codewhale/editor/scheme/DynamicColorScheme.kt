@@ -10,7 +10,6 @@ import androidx.compose.ui.graphics.toArgb
 import io.github.rosemoe.sora.widget.schemes.EditorColorScheme
 
 @Composable
-@RequiresApi(Build.VERSION_CODES.S)
 fun SchemeDynamicColor(
     colorScheme: ColorScheme,
 ) = SchemeDynamicColor(
@@ -19,7 +18,6 @@ fun SchemeDynamicColor(
     selectionBackgroundColor = LocalTextSelectionColors.current.backgroundColor
 )
 
-@RequiresApi(Build.VERSION_CODES.S)
 class SchemeDynamicColor(
     private val handleColor: Color?,
     private val selectionBackgroundColor: Color?,

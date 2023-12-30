@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Build
 import android.util.Log
 import android.widget.Toast
+import androidx.annotation.ChecksSdkIntAtLeast
 
 //
 //@ChecksSdkIntAtLeast(parameter = 0, lambda = 1)
@@ -27,6 +28,7 @@ import android.widget.Toast
 //
 //}
 
+@ChecksSdkIntAtLeast(parameter = 0)
 fun isSdkAtLeast(sdkVersion: Int) = Build.VERSION.SDK_INT >= sdkVersion
 
 fun Context.toast(str: String) = Toast.makeText(this, str, Toast.LENGTH_SHORT).show()
