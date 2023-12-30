@@ -24,10 +24,10 @@ android {
     buildTypes {
         signingConfigs {
             create("release") {
-                keyAlias = "keyGlobal"
-                keyPassword = "rQ7QZPMxZEpDRsvZ"
-                storeFile = file("/Users/bluewhaleyt/AndroidStudioProjects/globalkeystore.keystore")
-                storePassword = "rQ7QZPMxZEpDRsvZ"
+                keyAlias = "keyCodeWhale"
+                keyPassword = "M3y7Mk3jNEYthD2s"
+                storeFile = file("/Users/bluewhaleyt/AndroidStudioProjects/WhaleComposeProducts/CodeWhale/codewhale-release.keystore")
+                storePassword = "M3y7Mk3jNEYthD2s"
             }
         }
         release {
