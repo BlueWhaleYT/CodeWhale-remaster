@@ -26,7 +26,7 @@ android {
             create("release") {
                 keyAlias = "keyCodeWhale"
                 keyPassword = "M3y7Mk3jNEYthD2s"
-                storeFile = file("/Users/bluewhaleyt/AndroidStudioProjects/WhaleComposeProducts/CodeWhale/codewhale-release.keystore")
+                storeFile = file("../codewhale-release.keystore")
                 storePassword = "M3y7Mk3jNEYthD2s"
             }
         }
