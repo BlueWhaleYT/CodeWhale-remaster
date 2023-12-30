@@ -46,6 +46,7 @@ dependencies {
     implementation(libs.bundles.core)
     implementation(libs.bundles.compose)
     implementation(libs.bundles.composeAccompanist)
+    implementation(libs.bundles.test)
 
     // Sora Editor
     api(platform("io.github.Rosemoe.sora-editor:bom:0.22.1"))
