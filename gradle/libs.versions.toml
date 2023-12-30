@@ -81,3 +81,7 @@ composeAccompanist = [
     "androidxComposeAccompanistSystemuicontroller",
     "androidxComposeAccompanistPagerIndicators",
 ]
+
+test = [
+    "junit"
+]

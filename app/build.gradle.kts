@@ -63,6 +63,7 @@ dependencies {
     implementation(libs.bundles.core)
     implementation(libs.bundles.compose)
     implementation(libs.bundles.composeAccompanist)
+    implementation(libs.bundles.test)
 
     // Modules
     implementation(project(":common"))
