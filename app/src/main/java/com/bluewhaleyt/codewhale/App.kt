@@ -13,7 +13,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.bluewhaleyt.codewhale.common.utils.FileUtils
+import com.bluewhaleyt.codewhale.common.utils.file.FileUtils
 import com.bluewhaleyt.codewhale.ui.screen.editor.EditorScreen
 import com.bluewhaleyt.codewhale.ui.screen.main.MainScreen
 

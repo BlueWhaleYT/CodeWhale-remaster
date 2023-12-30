@@ -68,6 +68,17 @@ dependencies {
     implementation(project(":common"))
     implementation(project(":editor"))
 
-    // Markdown Text
+    implementation("com.github.BlueWhaleYT:CrashDebugger:1.0.0.1")
+
+    // Markdown Text - for parsing privacy policy file
     implementation("com.github.jeziellago:compose-markdown:0.3.7")
+
+    // TreeView - for file drawer
+    implementation("cafe.adriel.bonsai:bonsai-core:1.2.0")
+    implementation("cafe.adriel.bonsai:bonsai-file-system:1.2.0")
+
+    // Coil - for async image and svg file icon from web url
+    implementation("io.coil-kt:coil:2.5.0")
+    implementation("io.coil-kt:coil-compose:2.5.0")
+    implementation("io.coil-kt:coil-svg:2.5.0")
 }

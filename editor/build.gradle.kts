@@ -50,5 +50,6 @@ dependencies {
     // Sora Editor
     api(platform("io.github.Rosemoe.sora-editor:bom:0.22.1"))
     api("io.github.Rosemoe.sora-editor:editor")
+    api("io.github.Rosemoe.sora-editor:language-java")
     api("io.github.Rosemoe.sora-editor:language-textmate")
 }

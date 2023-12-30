@@ -34,15 +34,6 @@ fun CodeWhaleTheme(
         else -> lightColorScheme()
     }
 
-    val view = LocalView.current
-    if (!view.isInEditMode) {
-        SideEffect {
-            val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
-        }
-    }
-
     BetterSystemBarAppearance(colorScheme = colorScheme, darkTheme = darkTheme)
 
     MaterialTheme(
@@ -66,12 +57,10 @@ internal fun BetterSystemBarAppearance(
             val windowBackgroundColor = colorScheme.background.toArgb()
             window.setBackgroundDrawable(ColorDrawable(windowBackgroundColor))
             val insetsController = WindowCompat.getInsetsController(window, view)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                window.statusBarColor = Color.Transparent.toArgb()
-                insetsController.isAppearanceLightStatusBars = !darkTheme
-            }
+            window.statusBarColor = Color.Transparent.toArgb()
+            insetsController.isAppearanceLightStatusBars = !darkTheme
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
-                window.navigationBarColor = Color.Transparent.toArgb()
+                window.navigationBarColor = colorScheme.surfaceContainer.toArgb()
                 insetsController.isAppearanceLightNavigationBars = !darkTheme
             }
         }
